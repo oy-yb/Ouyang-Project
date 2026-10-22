@@ -1,0 +1,42 @@
+% !TeX program = pdflatex
+% Overleaf main document: main.tex
+% false = formal IMWUT single-column article preview (not a camera-ready claim).
+% true  = anonymous manuscript review layout with line numbers.
+\newif\ifreviewversion
+\reviewversionfalse
+\ifreviewversion
+  \documentclass[manuscript,review,anonymous,screen]{acmart}
+\else
+  \documentclass[acmlarge,screen,nonacm]{acmart}
+\fi
+\input{preamble}
+\begin{document}
+\title[Physiology Informed Agents for Collaborative XR]{\projecttitle}
+\subtitle{From Multimodal Team Sensing to Context Sensitive Assistance}
+% Replace this author block when preparing a non-anonymous author version.
+% For review, leave reviewversion=true and remove identifying metadata.
+\author{Anonymous Author(s)}
+\renewcommand{\shortauthors}{Anonymous Author(s)}
+\begin{abstract}
+\input{sections/00_abstract}
+\end{abstract}
+\ccsdesc[500]{Human-centered computing~Ubiquitous and mobile computing systems and tools}
+\ccsdesc[300]{Human-centered computing~Computer supported cooperative work}
+\ccsdesc[300]{Human-centered computing~Virtual reality}
+\keywords{collaborative XR, wearable sensing, interpersonal physiology, proactive agents, intervention timing, team training}
+\maketitle
+\input{sections/01_introduction}
+\input{sections/02_related_work}
+\input{sections/03_research_questions}
+\input{sections/04_design_rationale_and_application_scope}
+\input{sections/05_formative_study}
+\input{sections/06_system_design}
+\input{sections/07_technical_evaluation}
+\input{sections/08_user_study}
+\input{sections/09_applications_to_training_and_education}
+\input{sections/10_discussion}
+\input{sections/11_conclusion}
+
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{references}
+\end{document}

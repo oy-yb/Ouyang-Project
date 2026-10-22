@@ -1,0 +1,36 @@
+\section{Related Work}
+\label{sec:2}
+
+\subsection{From XR sensing to individual assistance}
+
+A review of biofeedback and AI in XR training documents existing combinations of sensing, adaptation, and training, while the 2026 affective XR scoping review maps biodata-driven systems for understanding and sharing emotion ~\cite{p6,p37}. Physiologically adaptive VR has already used EDA to change environmental complexity ~\cite{p11}. These precedents position our work within adaptive XR rather than treating its component technologies as new.
+
+The 2026 systems GuideAI, AwareLLM, and Sensing What Surveys Miss connect individual state information with personalized or proactive LLM support ~\cite{guide,aware,sensing}. From Gaze to Guidance examines a gaze-grounded assistant using egocentric video for retrospective reading assistance; its evaluation should not be interpreted as evidence about continuous intervention during teamwork ~\cite{gaze}. Gaze-Informed Proactive AI Assistance for Children's Picture Exploration instead uses attention to select narrative assistance during picture exploration, providing another example of connecting implicit input with assistance content ~\cite{children}. Their relevance is the sensing-to-assistance connection; the open question here concerns relational evidence from several human collaborators.
+
+\subsection{Biosignals as communication and as evidence}
+
+Animo studies smartwatch-mediated sharing of heart-rate-based representations, and Significant Otter examines biosignal-informed communication between partners ~\cite{p38,p39}. Reviews of social biofeedback and interpersonal biosignal sharing further describe the communicative opportunities and interpretive problems of these interfaces ~\cite{p46,p21}. These systems investigate physiology as information presented to people. Our proposed agent instead uses physiological features as one input to a decision, without requiring teammates to see each other's raw signals.
+
+A 2026 workplace study finds that participants interpreted divergence between felt stress and physiological indicators through work and bodily context, supporting a distinction between measured response and reported experience ~\cite{feeling}.
+
+Interpersonal physiological research examines several different constructs, including coupling, shared arousal, synchrony, and action predictability; critical reviews caution against treating them as interchangeable explanations of social processes ~\cite{p32,p49}. Meta-analytic and recent review evidence also identifies heterogeneity in the relationship between synchrony and interpersonal outcomes ~\cite{p44,p23}. Accordingly, the proposed study will not optimize synchrony or classify high synchrony as successful teamwork by definition.
+
+\subsection{Multimodal analysis of collaboration}
+
+Collaborative-learning studies link physiological patterns to monitoring, regulation, argumentation, and interaction quality ~\cite{p25,p35,p41,p43,p47}. Work comparing synchrony measures with qualitative evidence further illustrates why physiological patterns need interpretation within the activity ~\cite{p56}. Multimodal collaboration reviews and the NISPI framework provide complementary foundations for relating physical and behavioral measurements to collaborative constructs ~\cite{p57,p14}.
+
+Within XR, physiological synchrony has been compared across remote VR and face-to-face collaboration, and teammate-action prediction has been studied in a three-person virtual task ~\cite{p63,p52}. These findings support investigating relational sensing in XR, but they do not establish that an agent acting on such estimates improves the team. We therefore separate descriptive association, prospective detection, intervention appropriateness, and causal outcome evaluation as different evidence requirements, rather than presenting prediction accuracy as proof of useful assistance.
+
+\subsection{Proactive intervention and robust wearable sensing}
+
+Proactive-assistant studies show that expected initiative and interruptibility vary with user characteristics, activity, and context ~\cite{expect,speaker}. StressSense addresses adaptation across speakers and acoustic conditions; HHISS examines physiological heterogeneity across people and environments; CRoP addresses personalization across changing contexts within a person ~\cite{stresssense,hhiss,crop}. These studies motivate testing unseen teams and sessions instead of assuming a laboratory model will generalize.
+
+Signal quality is a separate requirement. Gashi et al. investigate artifacts in ambulatory EDA, and physiological measurement guidance specifies reporting considerations for EDA and HRV ~\cite{artifacts,p61,p59}. DeepFeature further demonstrates context-aware feature generation and evaluation for wearable biosignals, including component analysis and system overhead ~\cite{deep}. We will use these as methodological precedents, without assuming a feature-generation method validated on other tasks necessarily improves collaboration sensing.
+
+VitalAgent integrates tools for physiological monitoring, while PULSE lets agents inspect sensing modalities and time windows to estimate support-related states ~\cite{vital,pulse}. The latter provides a retrospective benchmark rather than evidence that deployed interventions improve outcomes ~\cite{pulse}. Calm Commute offers a complementary intervention precedent by separately assessing physiological response and task performance in a controlled driving setting ~\cite{calm}. Together, these papers motivate evaluating sensing, decision-making, and consequences separately.
+
+\subsection{Medical training and collaborative education}
+
+TEAM provides a medical teamwork assessment instrument, and TEAMs go VR investigates its use in VR medical training ~\cite{p13,p66}. VORTeX combines multi-user VR with LLM-based analysis of nontechnical team skills, while Harmer et al. develop a multimodal debriefing dashboard with instructors ~\cite{p4,p26}. Physiological analyses of medical simulation and the 2026 study of medical dyads extend the sensing evidence, but retrospective interpretation and instructor-facing feedback should not be equated with demonstrated benefits from live physiology-informed prompting ~\cite{p67,p69,huang}.
+
+For education, socially shared regulation provides a framework for joint planning, monitoring, and reflection ~\cite{p29}. MR learner-AI interaction, gaze-aware pedagogical agents, and collaborative VR scaffolding offer relevant assistance mechanisms, although their interaction settings and measures differ ~\cite{p15,p27,p51}. The ICAP framework and productive-failure research motivate examining explanation and constructive engagement rather than assuming that easier or faster completion means better learning ~\cite{p10,p31}. CAMIL likewise provides an account of cognitive and affective factors in immersive learning, not a guarantee that adding sensors produces educational benefit ~\cite{p42}.

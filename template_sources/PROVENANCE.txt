@@ -1,0 +1,5 @@
+Unmodified ACM acmart production distribution downloaded from https://mirrors.ctan.org/macros/latex/contrib/acmart.zip
+Official format sources
+https://ubicomp.org/ubicomp-iswc-2026/formatting/
+https://ubicomp.hosting.acm.org/ubicompiswc2026_wp/imwut-papers/
+https://ctan.org/pkg/acmart

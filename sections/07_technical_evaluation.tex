@@ -1,0 +1,32 @@
+\section{Technical Evaluation}
+\label{sec:7}
+
+The offline stage will test RQ1 and RQ2 before deploying decisions in a live team. Generalization and personalization studies motivate evaluating people and contexts outside training, and DeepFeature illustrates separating overall performance from ablation and overhead ~\cite{hhiss,crop,deep}.
+
+\subsection{Dataset and reference labels}
+
+\missing{[TO COMPLETE: independent team count, participant count, sessions and duration, event prevalence, annotation protocol and agreement, class balance, missing data, exclusion rules, and demographic and expertise coverage.]}
+
+\subsection{Splits and prospective prediction}
+
+We propose keeping all members and overlapping windows from a team within one split, fitting preprocessing only on training data, and reserving validation data for thresholds and model selection. This is a proposed safeguard against overly optimistic evaluation; robustness across people and contexts is a central issue in the sensing literature ~\cite{hhiss,crop}. Every prediction will use only information available before its decision time. Retrospective explanatory analyses will be labeled separately.
+
+\missing{[TO COMPLETE: team-disjoint split procedure, nested tuning, session and task holdouts, causal feature cutoff, sample counts per split, and prespecified analysis plan.]}
+
+\subsection{Comparisons and ablations}
+
+The proposed comparisons are behavior and task context only; target-user physiology added; all users' individual physiology added without explicit coupling; and the full relational model. Additional ablations will remove individual modalities, relational features, and task context. These comparisons are designed to isolate physiological, multi-person, and relational value, rather than attributing any combined-model improvement to synchrony. Heterogeneity research and interpersonal prediction motivate this decomposition ~\cite{hhiss,p52}.
+
+We also propose temporally shifted or shuffled relational features, constrained to preserve appropriate task structure, as diagnostic controls for coupling that might reflect common events. Critical reviews of team physiology motivate considering alternative explanations for interpersonal patterns ~\cite{p32,p49}. Such controls will not substitute for intervention experiments.
+
+\missing{[TO COMPLETE: exact baseline implementations, matched model capacity, task-preserving controls, tuning budgets, missing-modality tests, and reproducibility settings.]}
+
+\subsection{Metrics and system feasibility}
+
+Candidate prediction measures include event-level precision and recall, area under the precision-recall curve, calibration, detection delay, and performance at a fixed false-intervention budget. Proposed deployment measures include valid-data coverage, end-to-end latency distributions, compute and memory demands, network failure, and user burden. Reporting component and overhead evidence follows the selected IMWUT systems precedents ~\cite{pro2,deep,hhiss}.
+
+\missing{[TO COMPLETE: event-matching rule, primary metric, operating threshold, acceptable delay and error budget, statistical intervals, hardware profiling method, and failure taxonomy.]}
+
+\subsection{Offline results}
+
+\missing{[RESULTS TO COMPLETE: overall comparison, target-only versus multi-person value, relational ablations, calibration, unseen-team and task performance, missing-data robustness, error analysis, and system overhead. Insert tables and figures only after analysis.]}

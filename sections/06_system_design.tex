@@ -1,0 +1,50 @@
+\section{System Design}
+\label{sec:6}
+
+\subsection{Conceptual sensing to action pipeline}
+
+The proposed pipeline has five responsibilities: acquire synchronized streams; assess signal quality and derive features; estimate a task-grounded support need; select whether, whom, and how to assist; and log the intervention and its consequences. Procedural assistance, robust biosignal processing, and tool-based physiological monitoring provide precedents for these responsibilities, but their combination in this project remains to be implemented and tested ~\cite{pro2,deep,artifacts,vital}.
+
+\begin{figure}[t]
+\centering
+\textcolor{red}{\parbox{0.90\linewidth}{[FIGURE 1 TO INSERT: implemented architecture showing per-user sensors, timestamp alignment, quality masks, individual and relational features, support-need estimator, decision policy, agent interface, and evaluation logs.]}}
+\par\rule{0pt}{18mm}
+\caption{\textcolor{red}{System architecture to be completed.}}
+\Description{Author completion placeholder for the architecture figure.}
+\label{fig:architecture}
+\end{figure}
+
+\missing{[TO COMPLETE: hardware and software architecture, module interfaces, deployment locations, models and versions, networking, storage, and data flow. Distinguish proposed modules from implemented modules.]}
+
+\subsection{Acquisition and synchronization}
+
+Candidate physiological streams are EDA and cardiac activity from ECG or PPG; candidate behavioral streams are speech, gaze, head and hand motion, object interactions, and task events. HRV will be treated as a derived cardiac measure, with analysis windows and preprocessing reported consistently with measurement guidance ~\cite{p59,p61}. Quality flags and missingness must remain available to the decision module because ambulatory artifact detection is distinct from psychological inference ~\cite{artifacts}.
+
+\missing{[TO COMPLETE: sensor models and placements, sampling rates, clock source, synchronization method, measured drift and error, baseline calibration, artifact rules, window durations, and valid-data thresholds.]}
+
+\subsection{Individual and relational representations}
+
+The proposed representation distinguishes individual changes, teammate responses, and pairwise or group temporal relationships. Interpersonal-coupling studies motivate relational features, while recurrence analysis provides one possible family of temporal measures ~\cite{p8,p52,p65}. Synchrony features will be treated as candidates whose usefulness must be validated, rather than as privileged ground truth ~\cite{p32,p49}. Model selection will compare simple interpretable alternatives with more complex temporal models before claiming that extra complexity is necessary.
+
+\missing{[TO COMPLETE: feature definitions, lag ranges, causal windows using only data available at decision time, task-event controls, quality masks, feature selection, model architecture, losses, calibration, and training procedure.]}
+
+\subsection{Support need estimation and decision policy}
+
+The estimator will output support-need evidence and uncertainty; the policy will choose an eligible target and action under task and user constraints. We propose a limited action vocabulary so sensing comparisons do not become confounded by different generative content. An LLM may phrase an approved prompt, but wording quality will be evaluated separately from support-need detection. This separation draws on component-based assistance evaluation and guidelines for communicating and correcting AI behavior ~\cite{pro2,p3}.
+
+\missing{[TO COMPLETE: output schema, confidence and abstention rules, target selection, refractory period, action eligibility, rate limits, personalization, prompt library, LLM use, and prevention of physiological disclosure.]}
+
+\subsection{Embodiment and interaction}
+
+XR moderation and attention-guidance studies offer candidate channels such as orientation, gaze, nonverbal cues, and speech ~\cite{p70,p34}. The final interface must specify which cues are public, which are private, how users refuse or correct assistance, and how the agent resumes after a declined prompt. These are design choices requiring formative validation, rather than assumed advantages of embodiment.
+
+\begin{figure}[t]
+\centering
+\textcolor{red}{\parbox{0.90\linewidth}{[FIGURE 2 TO INSERT: one fully specified interaction episode, including the observed evidence, uncertain interpretation, chosen target and action, user response, and subsequent team behavior.]}}
+\par\rule{0pt}{18mm}
+\caption{\textcolor{red}{Interaction episode to be completed.}}
+\Description{Author completion placeholder for the interaction figure.}
+\label{fig:interaction}
+\end{figure}
+
+\missing{[TO COMPLETE: agent appearance, output modality, spatial placement, private delivery mechanism, accessibility alternatives, and exact interaction sequences.]}
